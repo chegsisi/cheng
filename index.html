@@ -1,0 +1,91 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@include file="header.html" %>
+<head>
+<style type="text/css">
+body{
+
+}
+</style>
+<title>小程同学的博客</title>
+</head>
+<body>
+<script>
+function checklogin(){
+	 if('${userlist.get(0).name}' == ''){
+			alert("请先登录");
+	}
+	 else {
+			window.location.href="leaveMessage.jsp";
+	 	}
+}
+</script>
+<div class="jumbotron text-center" style="background-image:url(img/9.jpg);
+background-size: 100% 100%;
+background-repeat:no-repeat;height:260px;">
+<h2>我的第一个博客</h2>
+
+</div>
+  <div class="row">
+    <div class="col-sm-3">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="javascript:checklogin()">发表文章</a></li>
+        <li><a href="mlist">近期热门</a></li>
+        <li><a href="mlist">最新内容</a></li>
+      </ul>
+      <hr class="hidden-sm hidden-md hidden-lg">
+      <h3>关于我</h3><hr>
+      <p class="bg-warning ">个人介绍：华东交通大学软件工程专业大三在读</p>
+      <img src="img/2.jpg" id="img1"></img><br>
+      <div class="btn-group " role="group" aria-label="..." style="margin:10px;">
+      <button  id='prev1' type="button" class="btn btn-default">上一张</button>
+      <button  id='next1' type="button" class="btn btn-default">下一张</button>
+      </div>
+      </div>
+      <div class="col-sm-6">
+      <h3>为你推荐</h3><hr/>
+      <ul>
+      <li><a href="sort.jsp">常见排序算法总结</a></li><hr/>
+      <li><a>前端VS后端？程序员该如何进行职业选择</a></li><hr/>
+      <li><a>你已经是一个优秀的开发者了吗？我不是!</a></li><hr/>
+<li><a>前端必要懂的，完整的HTTP cookie指南</a></li><hr/>
+<li><a>CSS技巧集合</a></li><hr/>
+<li><a>常见的五种搭建本地静态html页面服务器</a></li><hr/>
+</ul>
+<nav aria-label="...">
+  <ul class="pager">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">上一页</span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">下一页</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+      </div>
+      <div class="col-sm-3">
+      <h3>课程推荐</h3>
+      <ul class="list-unstyled">
+      <li><a href="https://www.runoob.com/">菜鸟学习网站</a></li>
+      <li><a href="https://www.bootcss.com/">bootstarp中文网站</a></li>
+      </ul>
+      <h3>where with you</h3><hr>
+      <img src="img/10.jpg" id="img2"></img>
+      <div class="btn-group " role="group" aria-label="..." style="margin:10px;"><br>
+      <button  id='prev2' type="button" class="btn btn-default">上一张</button>
+      <button  id='next2' type="button" class="btn btn-default">下一张</button>
+      </div>
+      </div>
+      </div>
+<%@include file="footer.html" %>
+</body>
+</html>
+
